@@ -53,3 +53,51 @@ export const polygonMainnet: NetworkConfigInterface = {
     generateContractUrl: (contractAddress: string) => `https://polygonscan.com/address/${contractAddress}`,
   },
 }
+
+/*
+ * Cronos
+ */
+export const cronosTestnet: NetworkConfigInterface = {
+  chainId: 338,
+  symbol: 'tCRO',
+  blockExplorer: {
+    name: 'Cronoscan (Testnet)',
+    generateContractUrl: (contractAddress: string) => `https://testnet.cronoscan.com/address/${contractAddress}`,
+  },
+}
+
+export const cronosMainnet: NetworkConfigInterface = {
+  chainId: 25,
+  symbol: 'CRO',
+  blockExplorer: {
+    name: 'Cronos',
+    generateContractUrl: (contractAddress: string) => `https://cronoscan.com/address/${contractAddress}`,
+  },
+}
+
+export const truffle: NetworkConfigInterface = {
+  chainId: 25,
+  symbol: 'CRO',
+  blockExplorer: {
+    name: 'Cronos',
+    generateContractUrl: (contractAddress: string) => `https://cronoscan.com/address/${contractAddress}`,
+  },
+}
+
+export const hardhat: NetworkConfigInterface = {
+  chainId: 25,
+  symbol: 'CRO',
+  blockExplorer: {
+    name: 'Cronos',
+    generateContractUrl: (contractAddress: string) => `https://cronoscan.com/address/${contractAddress}`,
+  },
+}
+
+export const mainnet: NetworkConfigInterface = {
+  chainId: 25,
+  symbol: 'CRO',
+  blockExplorer: {
+    name: 'Cronos',
+    generateContractUrl: (contractAddress: string) => `https://cronoscan.com/address/${contractAddress}`,
+  },
+}

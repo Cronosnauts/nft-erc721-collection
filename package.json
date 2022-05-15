@@ -10,5 +10,16 @@
   },
   "scripts": {
     "build-dapp": "cd smart-contract; yarn; yarn compile; cd ../minting-dapp; yarn; yarn build"
+  },
+  "dependencies": {
+    "@ethereum-waffle/chai": "^3.4.4",
+    "@ethereum-waffle/provider": "^3.4.4",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "eth-json-rpc": "^0.3.4",
+    "ethereum-waffle": "^3.4.4",
+    "solc": "^0.8.13"
+  },
+  "devDependencies": {
+    "hardhat-etherscan": "^1.0.1"
   }
 }

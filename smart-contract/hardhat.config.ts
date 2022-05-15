@@ -23,7 +23,7 @@ dotenv.config();
  * Setting the value to "1.1" will raise the gas values by 10% compared to the
  * estimated value.
  */
-const DEFAULT_GAS_MULTIPLIER: number = 1;
+const DEFAULT_GAS_MULTIPLIER: number = 1.1;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -100,6 +100,8 @@ task('rename-contract', 'Renames the smart contract replacing all occurrences in
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
+const MAIN_PRIVATE_KEY = "039d17fedb3da5634bc09a7242c8be5d25f74eb3bdd7287ef8dc9e7e5defc0ec";
+
 const config: HardhatUserConfig = {
   solidity: {
     version: '0.8.9',
@@ -150,6 +152,8 @@ if (process.env.NETWORK_MAINNET_URL !== undefined) {
     url: process.env.NETWORK_MAINNET_URL,
     accounts: [process.env.NETWORK_MAINNET_PRIVATE_KEY!],
     gasMultiplier: DEFAULT_GAS_MULTIPLIER,
+    timeout: 20000,
+    gasPrice: 5000 * 1e9,
   };
 }
 

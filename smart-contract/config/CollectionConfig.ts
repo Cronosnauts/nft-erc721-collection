@@ -4,29 +4,29 @@ import * as Marketplaces from '../lib/Marketplaces';
 import whitelistAddresses from './whitelist.json';
 
 const CollectionConfig: CollectionConfigInterface = {
-  testnet: Networks.ethereumTestnet,
-  mainnet: Networks.ethereumMainnet,
+  testnet: Networks.cronosTestnet,
+  mainnet: Networks.cronosMainnet,
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: 'YourNftToken',
-  tokenName: 'My NFT Token',
-  tokenSymbol: 'MNT',
-  hiddenMetadataUri: 'ipfs://__CID__/hidden.json',
-  maxSupply: 10000,
+  contractName: 'NautsDogsClub',
+  tokenName: 'NautsDogs Club',
+  tokenSymbol: 'NDC',
+  hiddenMetadataUri: 'ipfs://QmchMkCt74XFtZ2CYrjpLCCSy1nPoJqBkF7PaGg6raFwr4/hidden.json',
+  maxSupply: 555,
   whitelistSale: {
-    price: 0.05,
-    maxMintAmountPerTx: 1,
+    price: 220,
+    maxMintAmountPerTx: 3,
   },
   preSale: {
-    price: 0.07,
-    maxMintAmountPerTx: 2,
+    price: 270,
+    maxMintAmountPerTx: 3,
   },
   publicSale: {
-    price: 0.09,
-    maxMintAmountPerTx: 5,
+    price: 300,
+    maxMintAmountPerTx: 3,
   },
-  contractAddress: null,
+  contractAddress: "0x7D193735f6bbf3ac9D2b7C452520d856B9ac6C36",
   marketplaceIdentifier: 'my-nft-token',
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,

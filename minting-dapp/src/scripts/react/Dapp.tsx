@@ -65,11 +65,11 @@ export default class Dapp extends React.Component<Props, State> {
     if (browserProvider?.isMetaMask !== true) {
       this.setError( 
         <>
-          We were not able to detect <strong>MetaMask</strong>. We value <strong>privacy and security</strong> a lot so we limit the wallet options on the DAPP.<br />
+          We were not able to detect <strong>MetaMask</strong>. We value <strong>privacy and security</strong> a lot so we limit the wallet options on the Spaceship.<br />
           <br />
-          But don't worry! <span className="emoji">😃</span> You can always interact with the smart-contract through <a href={this.generateContractUrl()} target="_blank">{this.state.networkConfig.blockExplorer.name}</a> and <strong>we do our best to provide you with the best user experience possible</strong>, even from there.<br />
+          But don't worry 'nauts! <span className="emoji">🧑‍🚀</span> You can always interact with the smart-contract through <a href={this.generateContractUrl()} target="_blank">{this.state.networkConfig.blockExplorer.name}</a> and <strong>we do our best to provide you with the best user experience possible</strong>, even from there.<br />
           <br />
-          You can also get your <strong>Whitelist Proof</strong> manually, using the tool below.
+          You can also get your <strong>WL Proof</strong> manually, using the tool below.
         </>,
       );
     }
@@ -137,7 +137,7 @@ export default class Dapp extends React.Component<Props, State> {
       merkleProofManualAddressFeedbackMessage: 
       <>
         <strong>Congratulations!</strong> <span className="emoji">🎉</span><br />
-        Your Merkle Proof <strong>has been copied to the clipboard</strong>. You can paste it into <a href={this.generateContractUrl()} target="_blank">{this.state.networkConfig.blockExplorer.name}</a> to claim your tokens.
+        Your NautsDogs <strong>has been copied to the clipboard</strong>. You can paste it into <a href={this.generateContractUrl()} target="_blank">{this.state.networkConfig.blockExplorer.name}</a> to claim your tokens.
       </>,
     });
   }
@@ -147,7 +147,7 @@ export default class Dapp extends React.Component<Props, State> {
       <>
         {this.isNotMainnet() ?
           <div className="not-mainnet">
-            You are not connected to the main network.
+            You are not connected to the Cronos network.
             <span className="small">Current network: <strong>{this.state.network?.name}</strong></span>
           </div>
           : null}
@@ -181,7 +181,7 @@ export default class Dapp extends React.Component<Props, State> {
                   />
                   :
                   <div className="collection-sold-out">
-                    <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
+                    <h2>All pets have been <strong>sold out</strong>! <span className="emoji">🧑‍🚀</span></h2>
 
                     You can buy from our beloved holders on <a href={this.generateMarketplaceUrl()} target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
                   </div>
@@ -194,7 +194,7 @@ export default class Dapp extends React.Component<Props, State> {
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
 
-                Loading collection data...
+                Loading spaceship data...
               </div>
             }
           </>
@@ -205,15 +205,15 @@ export default class Dapp extends React.Component<Props, State> {
             {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
             
             <div className="use-block-explorer">
-              Hey, looking for a <strong>super-safe experience</strong>? <span className="emoji">😃</span><br />
+            🧑‍🚀 CAPTAIN: Ehy 'nauts! need <strong>super-safe experience</strong>?<br />
               You can interact with the smart-contract <strong>directly</strong> through <a href={this.generateContractUrl()} target="_blank">{this.state.networkConfig.blockExplorer.name}</a>, without even connecting your wallet to this DAPP! <span className="emoji">🚀</span><br />
               <br />
-              Keep safe! <span className="emoji">❤️</span>
+              Keep safe in space! <span className="emoji">❤️</span>
             </div>
 
             {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
               <div className="merkle-proof-manual-address">
-                <h2>Whitelist Proof</h2>
+                <h2>Whitelist NDC</h2>
                 <p>
                   Anyone can generate the proof using any public address in the list, but <strong>only the owner of that address</strong> will be able to make a successful transaction by using it.
                 </p>
